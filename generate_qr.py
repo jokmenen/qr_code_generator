@@ -8,7 +8,7 @@ pd.set_option('display.max_columns', None)
 
 OUTPUT_FOLDER = Path() / 'output'
 
-OUTPUT_FOLDER.mkdir()
+OUTPUT_FOLDER.mkdir(exist_ok=True)
 
 def generate_qr_code(data, filename=None):
     factory = qrcode.image.svg.SvgPathImage
