@@ -25,6 +25,8 @@ def generate_qr_code(data, filename=None):
     img = qr.make_image(image_factory=factory, fill_color="black", back_color="white")
     i = 0
     if filename:
+            if not filename.endswith('.svg'):
+                filename += '.svg'
             save_path = Path(filename)
     else:
         while True:
